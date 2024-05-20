@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://c3ib8rdggbsd2"]
+
+[ext_resource type="Script" path="res://scenes/manager/obstacle_manager.gd" id="1_cn0mn"]
+[ext_resource type="PackedScene" uid="uid://dpt04q0tksme" path="res://scenes/game_object/obstacle/obstacle.tscn" id="2_3uj5w"]
+
+[node name="ObstacleManager" type="Node"]
+script = ExtResource("1_cn0mn")
+obstacle_scene = ExtResource("2_3uj5w")
+
+[node name="Timer" type="Timer" parent="."]

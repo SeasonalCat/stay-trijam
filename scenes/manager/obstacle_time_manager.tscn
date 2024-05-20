@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dmnk6a4r4o3sf"]
+
+[ext_resource type="Script" path="res://scenes/manager/obstacle_time_manager.gd" id="1_6fc3s"]
+
+[node name="ObstacleTimeManager" type="Node"]
+script = ExtResource("1_6fc3s")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
