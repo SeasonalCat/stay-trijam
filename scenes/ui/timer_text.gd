@@ -15,4 +15,4 @@ func _process(delta):
 
 
 func format_current_time(time: float):
-	return str(time / 1000) + "s"
+	return "%01.3fs" % (time / 1000)
