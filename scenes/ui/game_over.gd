@@ -2,9 +2,9 @@ extends CanvasLayer
 
 
 func _ready():
-	get_tree().paused = true
 	$MarginContainer/PanelContainer/MarginContainer/VBoxContainer/RestartButton.pressed.connect(on_restart_button_pressed)
 	$MarginContainer/PanelContainer/MarginContainer/VBoxContainer/QuitButton.pressed.connect(on_quit_button_pressed)
+	get_tree().paused = true
 
 
 func on_restart_button_pressed():
