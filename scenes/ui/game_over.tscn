@@ -30,11 +30,6 @@ layout_mode = 2
 theme_override_font_sizes/font_size = 72
 text = "Game Over"
 
-[node name="ScoreLabel" type="Label" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 36
-text = "Your Score: 1000.00s"
-
 [node name="RestartButton" type="Button" parent="MarginContainer/PanelContainer/MarginContainer/VBoxContainer"]
 layout_mode = 2
 theme_override_font_sizes/font_size = 36

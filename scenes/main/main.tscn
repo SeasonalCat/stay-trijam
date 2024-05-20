@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://ct4j8n62thngg"]
+[gd_scene load_steps=10 format=3 uid="uid://ct4j8n62thngg"]
 
 [ext_resource type="Texture2D" uid="uid://4cov5udl3krj" path="res://assets/Background.png" id="1_cxeko"]
 [ext_resource type="Script" path="res://scenes/main/main.gd" id="1_raxyv"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://dmnk6a4r4o3sf" path="res://scenes/manager/obstacle_time_manager.tscn" id="3_2fdms"]
 [ext_resource type="PackedScene" uid="uid://c3ib8rdggbsd2" path="res://scenes/manager/obstacle_manager.tscn" id="4_1yqrn"]
 [ext_resource type="AudioStream" uid="uid://duat0x7xp0l8a" path="res://assets/music.mp3" id="6_jd3oh"]
+[ext_resource type="PackedScene" uid="uid://60kdric8owen" path="res://scenes/ui/timer_text.tscn" id="9_o6j40"]
 
 [node name="Main" type="Node"]
 script = ExtResource("1_raxyv")
@@ -33,3 +34,5 @@ position = Vector2(628, 324)
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("6_jd3oh")
 autoplay = true
+
+[node name="TimerText" parent="." instance=ExtResource("9_o6j40")]

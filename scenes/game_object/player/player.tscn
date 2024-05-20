@@ -87,8 +87,6 @@ _data = {
 radius = 19.0
 
 [node name="Player" type="CharacterBody2D"]
-collision_layer = 3
-collision_mask = 3
 script = ExtResource("1_w5ky0")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
@@ -105,7 +103,13 @@ hframes = 8
 frame = 7
 
 [node name="CollisionArea2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollisionArea2D"]
+position = Vector2(-2, 10)
+shape = SubResource("CircleShape2D_ohuyi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-2, 10)
 shape = SubResource("CircleShape2D_ohuyi")

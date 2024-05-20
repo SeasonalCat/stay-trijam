@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://60kdric8owen"]
+
+[ext_resource type="Script" path="res://scenes/ui/timer_text.gd" id="1_bcvmd"]
+
+[node name="TimerText" type="CanvasLayer"]
+script = ExtResource("1_bcvmd")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+offset_right = 1152.0
+offset_bottom = 648.0
+theme_override_constants/margin_top = 8
+
+[node name="Label" type="Label" parent="MarginContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+theme_override_font_sizes/font_size = 36
+text = "0.00s"

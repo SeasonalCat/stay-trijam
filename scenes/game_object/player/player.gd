@@ -6,6 +6,9 @@ const ACCELERATION_SMOOTHING = 25
 @onready var animation_player = $AnimationPlayer
 @onready var visuals = $Visuals
 
+func _ready():
+	$CollisionArea2D.body_entered.connect(on_body_entered)
+
 func _process(delta):
 	var movement_vector = get_movement_vector()
 	var direction = movement_vector.normalized()
@@ -31,3 +34,7 @@ func get_movement_vector():
 	return Vector2(x_movement, y_movement)
 
 
+func on_body_entered(other_body: Node2D):
+	other_body.queue_free()
+	# move the other_body back in the direction we were traveling
+	other_body.position -= velocity.normalized() * 10
