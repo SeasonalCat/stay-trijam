@@ -13,8 +13,7 @@ func _ready():
 
 
 func _draw():
-	draw_circle(Vector2(0, 0), radius, Color(1, 1, 1, 0.5))
-
+	draw_circle(Vector2.ZERO, radius, Color(1, 1, 1, 0.5))
 
 func on_body_exited(other_body: Node2D):
 	out_of_zone.emit()
