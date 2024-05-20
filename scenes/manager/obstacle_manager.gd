@@ -1,6 +1,6 @@
 extends Node
 
-const SPAWN_RADIUS = 375
+const SPAWN_RADIUS = 1000
 
 @export var obstacle_scene: PackedScene
 @export var obstacle_time_manager: ObstacleTimeManager
@@ -51,6 +51,6 @@ func on_timer_timeout():
 
 
 func on_arena_difficulty_increased(obstacle_difficulty: int):
-	var new_wait_time = base_spawn_time - 0.01 * obstacle_difficulty
-	timer.wait_time = min(0.05, new_wait_time)
+	var new_wait_time = base_spawn_time - (0.01 * obstacle_difficulty)
+	timer.wait_time = max(0.05, new_wait_time)
 	

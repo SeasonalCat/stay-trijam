@@ -2,9 +2,8 @@ extends CharacterBody2D
 
 
 @onready var sprite = $Visuals/Sprite2D
+var max_speed: int = 400
 
-
-# variable containing list of possible textures
 var textures = [
 	preload("res://assets/leaf.png"),
 	preload("res://assets/news.png"),
@@ -15,8 +14,26 @@ var textures = [
 	preload("res://assets/umbrella.png")
 ]
 
-# pick a texture at random on loading
+
 func _ready():
 	var texture = textures[randi() % textures.size()]
 	sprite.texture = texture
+
+func _process(_delta):
+	if (velocity == Vector2.ZERO):
+		accelerate_to_player()
+	
+	move_and_slide()
+
+func accelerate_to_player():	
+	var player = get_tree().get_first_node_in_group("player") as Node2D
+	if player == null:
+		return
+	
+	var direction = (player.global_position - global_position).normalized()
+
+	var angle = randf_range(-PI / 20, PI / 20)
+	direction = direction.rotated(angle)
+
+	velocity = direction * max_speed
 

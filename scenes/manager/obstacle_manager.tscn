@@ -8,3 +8,4 @@ script = ExtResource("1_cn0mn")
 obstacle_scene = ExtResource("2_3uj5w")
 
 [node name="Timer" type="Timer" parent="."]
+autostart = true
