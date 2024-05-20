@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://yfhnoaxrwdjt"]
+
+[ext_resource type="Texture2D" uid="uid://7f4nhl1p862m" path="res://assets/player/player-idle.png" id="1_nwsac"]
+
+[node name="Player" type="CharacterBody2D"]
+
+[node name="Visuals" type="Node2D" parent="."]
+
+[node name="Sprite2D" type="Sprite2D" parent="Visuals"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_nwsac")
+hframes = 8
