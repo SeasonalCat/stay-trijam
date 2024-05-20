@@ -2,6 +2,7 @@ extends CharacterBody2D
 
 
 @onready var sprite = $Visuals/Sprite2D
+@onready var timer = $Timer
 var max_speed: int = 400
 
 var textures = [
@@ -19,6 +20,7 @@ func _ready():
 	var texture = textures[randi() % textures.size()]
 	sprite.texture = texture
 	$Area2D.body_entered.connect(collide_with_player)
+	$Timer.timeout.connect(queue_free)
 
 
 func _process(delta):

@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d35k21bb10lvm"]
+[gd_scene load_steps=3 format=3 uid="uid://d35k21bb10lvm"]
 
 [ext_resource type="Script" path="res://scenes/ui/game_over.gd" id="1_wgrdi"]
+[ext_resource type="AudioStream" uid="uid://dtvyd6kryge4e" path="res://assets/endborf.mp3" id="2_cl52p"]
 
 [node name="GameOver" type="CanvasLayer"]
 process_mode = 3
@@ -40,3 +41,7 @@ text = "Restart"
 layout_mode = 2
 theme_override_font_sizes/font_size = 36
 text = "Quit"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_cl52p")
+autoplay = true
